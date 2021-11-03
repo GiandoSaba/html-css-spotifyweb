@@ -46,11 +46,6 @@ html {
 .column {
     flex-direction: column;
 }
-
-.scroll {
-    overflow-y: scroll;
-}
-
 /* MAIN */
 
 main {
@@ -84,6 +79,7 @@ main {
 /* LEFT NAV */
 
 main .left-nav {
+    height: 100%;
     width: var(--left-nav-width);
     background-color: var(--nav-bg-color);
 }
@@ -100,17 +96,12 @@ main .left-nav {
 }
 
 .nav-container {
+    height: 100%;
     justify-content: space-between;
-    height: calc(100% - var(--footer-height));
 }
 
 .link-container {
-    height: 80%;
-}
-
-.yellowback {
-    height: 20%;
-    background-color: yellow;
+    flex-basis: 90%;
 }
 
 .list .list-item {
@@ -160,7 +151,52 @@ main .left-nav {
     margin-right: 10px;
 }
 
+.nav-footer {
+    margin: 1em;
+    flex-basis: 10%;
+}
+
+.nav-footer .install,
+.nav-footer .profile {
+    font-weight: bold;
+    margin: 5px;
+    align-items: center;
+}
+
+
+.nav-footer .row {
+    width: 100%;
+    height: 2px;
+    border: 1px solid var(--subtitle-font-color);
+}
+
+.nav-footer .install a {
+    text-decoration: none;
+    color:var(--subtitle-font-color);
+    
+}
+.nav-footer .install svg {
+    width: 1.5em;
+    fill: var(--subtitle-font-color);
+    margin-right: 10px;
+}
+
+.nav-footer .profile a {
+    text-decoration: none;
+    color:var(--main-font-color);
+    
+}
+.nav-footer .profile svg {
+    width: 2em;
+    fill: white;
+    margin-right: 10px;
+    background-color: var(--subtitle-font-color);
+    border-radius: 50%;
+}
+
+
 main .main-content {
+    overflow-y: scroll;
     width: calc(100% - var(--left-nav-width));
     
 }
