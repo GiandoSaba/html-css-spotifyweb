@@ -4,6 +4,7 @@
     --main-bg-color: #141922;
     --nav-bg-color: #000000;
     --footer-bg-color: #282828;
+    --green-active-color: #ADFF2F;
     --main-font-color: white;
     --subtitle-font-color: grey;
     --left-nav-width: 250px;
@@ -42,12 +43,22 @@ html {
     display: flex;
 }
 
+.column {
+    flex-direction: column;
+}
+
+.scroll {
+    overflow-y: scroll;
+}
+
 /* MAIN */
 
 main {
     height: calc(100% - var(--footer-height));
     background-color: var(--main-bg-color);
 }
+
+/* CALL TO ACTION */
 
 .main-content .call-to-action {
     top: 0;
@@ -61,20 +72,23 @@ main {
 
 .main-content .call-to-action .cta-btn {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.8em;
+    font-size: 0.7em;
     border: 1px solid white;
     border-radius: 100px;
     color: white;
     background-color: transparent;
     margin: auto 1em;
-    padding: 1em 2em;
+    padding: 1em 2.5em;
 }
+
+/* LEFT NAV */
 
 main .left-nav {
     width: var(--left-nav-width);
     background-color: var(--nav-bg-color);
-    flex-direction: column;
 }
+
+/* LOGO */
 
 .logo {
     height: var(--footer-height);
@@ -85,11 +99,75 @@ main .left-nav {
     margin: auto 1em;
 }
 
+.nav-container {
+    justify-content: space-between;
+    height: calc(100% - var(--footer-height));
+}
+
+.link-container {
+    height: 80%;
+}
+
+.yellowback {
+    height: 20%;
+    background-color: yellow;
+}
+
+.list .list-item {
+    align-items: center;
+    padding: 5px 1em;
+    margin: 5px 0 0 0;
+    color: var(--subtitle-font-color);
+}
+
+.list .list-item > a {
+    font-size: 1em;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.list.button .list-item > svg {
+    width: 2em;
+    margin-right: 10px;
+    fill: var(--subtitle-font-color);
+} 
+
+.list.button .list-item.active {
+    border-left: 3px solid var(--green-active-color);
+    color: var(--main-font-color);
+}
+
+.list.button .list-item.sctive svg {
+    fill: var(--main-font-color);
+}
+
+.list.playlist .list-item.title {
+    color: var(--main-font-color);
+    font-size: 0.8em;
+    margin-top: 25px;
+}
+
+.list.playlist .plus {
+    width: 40px;
+    height: 40px;
+    font-size: 2.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 40px;
+    background-color: var(--subtitle-font-color);
+    color: var(--nav-bg-color);
+    margin-right: 10px;
+}
+
 main .main-content {
     width: calc(100% - var(--left-nav-width));
+    
 }
 
 .footer-nav {
     height: var(--footer-height);
     background-color: var(--footer-bg-color);
+    bottom: 0;
+    right: 0;
 }
