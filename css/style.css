@@ -1,9 +1,80 @@
+/* BASIC AND VAR */
+
+:root {
+  --main-bg-color: #141922;
+  --nav-bg-color: #000000;
+  --footer-bg-color: #282828;
+  
+  --main-font-color: white;
+  --subtitle-font-color: grey;
+  
+  --footer-height: 80px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: black;
+html {
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--main-font-color);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+/* COMMON */
+
+.width-100 {
+    width: 100%;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.float::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.col {
+    float:left
+}
+
+/* MAIN */
+main {
+    height: calc(100% - var(--footer-height));
+    background-color: var(--main-bg-color);
+}
+
+main .left-nav {
+    width: 250px;
+    height: 100%;
+    background-color: var(--nav-bg-color);
+}
+
+main .main-content {
+    width: calc(100% - 250px);
+    height: 100%;
+}
+
+.main-content .call-to-action {
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: calc(100% - 250px);
+    height: var(--footer-height);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-nav {
+    height: var(--footer-height);
+    background-color: var(--footer-bg-color);
 }
