@@ -98,16 +98,15 @@ main .left-nav {
     height: 100%;
     background-color: var(--nav-bg-color);
     min-height: var(--left-nav-min-height);
-    overflow: hidden;
 }
 
 .left-nav .left-nav-top {
     height: calc(100% - var(--footer-height));
+    overflow: hidden;
 }
 
 .left-nav .left-nav-bottom {
     height: var(--footer-height);
-    background-color: yellow;
 }
 
 main .main-content {
@@ -124,7 +123,7 @@ main .main-content {
     display: flex;
     height: var(--call-to-action-height);
     width: 60%;
-    margin: 0 auto 0 20px;
+    margin-left: 10%;
 }
 
 .left-nav-top .logo .logo-small {
@@ -132,6 +131,10 @@ main .main-content {
 }
 
 /* BUTTON NAV  */
+
+.button-nav {
+    height: 110px;
+}
 
 .button-nav-list .button-nav-list-item {
     align-items: center;
@@ -167,6 +170,7 @@ main .main-content {
 
 .playlist-nav {
     width: 80%;
+    height: calc(100% - (110px + var(--call-to-action-height)));
     margin: 20px auto;
     font-size: 0.8em;
     line-height: 2em;
@@ -176,6 +180,7 @@ main .main-content {
     color: white;
     font-weight: 700;
     font-size: 0.9em;
+    margin-bottom: 0.5em;
 }
 
 .playlist-nav .add-playlist .plus {
@@ -194,8 +199,31 @@ main .main-content {
     line-height: 30px;
 }
 
-.playlist-nav .playlist-nav-list-cont {
+.playlist-nav .playlist-title {
+    height: 70px;
+}
+
+.playlist-nav .playlist-nav-list {
     overflow: auto;
+    height: calc(100% - 70px);
+    line-height: 2.5em;
+    padding-bottom: 20px;
+}
+
+/* ACCOUNT NAV */
+
+.account-nav {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.account-nav svg {
+    flex-basis: 1em;
+}
+
+.account-nav a {
+    font-size: 0.8em;
+    font-weight: 500;
 }
 
 
@@ -210,6 +238,10 @@ main .main-content {
     
     .main-content .call-to-action {
         width: calc(100% - var(--left-nav-xs-width));
+    }
+
+    .left-nav-top .logo{
+        margin-left: 20%;
     }
     
     .left-nav-top .logo .logo-small {
