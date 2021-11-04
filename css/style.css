@@ -30,6 +30,10 @@ a {
     color: var(--main-font-color);
 }
 
+a:hover {
+    color: white;
+}
+
 ul {
     list-style-type: none;
 }
@@ -227,8 +231,14 @@ main .main-content {
     font-size: 2.5em;
 }
 
-.playlist-nav .add-playlist h3 {
+.playlist-nav .add-playlist:hover .plus {
+    background-color: white;
+}
+
+.playlist-nav .add-playlist a {
     line-height: 30px;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .playlist-nav .playlist-title {
@@ -456,4 +466,75 @@ main .main-content {
 .footer-nav .volume .line {
     width: 80px;
     margin: 0 2%;
+}
+
+
+/* MAIN CONTENT */
+
+.main-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.main-container section {
+    margin: 1.5em 0;
+}
+
+.main-container section > h3 {
+    margin: 1em 0;
+    font-size: 0.8em;
+}
+
+.main-container h1,
+.main-container h2 {
+    color: white;
+}
+
+.categories ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 1em;
+}
+
+.categories a{
+    font-size: 0.8em;
+    line-height: 2em;
+    margin: 0 1em;
+    font-weight: bold;
+}
+
+.categories li:first-child:after {
+    content: '';
+    display: block;
+    width: 30%;
+    height: 3px;
+    margin: 0 auto;
+    background-color: var(--green-active-color);
+}
+
+.section-album {
+    justify-content: space-around;
+    text-align: center;
+}
+
+.album-container{
+    width: calc(100% / 6);
+    margin: 0 0.5em;
+    line-height: 1.3em;
+}
+
+.album-container img{
+    width: 100%;
+}
+
+.album-container h2{
+    font-size: 80%;
+}
+
+.album-container h3{
+    font-size: 60%;
+}
+
+.popular .album-container img{
+    border-radius: 50%;
 }
