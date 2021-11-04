@@ -101,12 +101,12 @@ main .left-nav {
 }
 
 .left-nav .left-nav-top {
-    height: calc(100% - var(--footer-height));
+    height: calc(100% - var(--call-to-action-height));
     overflow: hidden;
 }
 
 .left-nav .left-nav-bottom {
-    height: var(--footer-height);
+    height: var(--call-to-action-height);
 }
 
 main .main-content {
@@ -214,16 +214,45 @@ main .main-content {
 
 .account-nav {
     width: 80%;
+    height: 100%;
     margin: 0 auto;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.account-nav svg {
-    flex-basis: 1em;
+.account-nav .line {
+    width: 100%;
+    height: 1px;
+    margin: 5px 0;
+    background-color: var(--main-font-color);
 }
 
 .account-nav a {
     font-size: 0.8em;
     font-weight: 500;
+}
+
+.account-nav .install svg {
+    fill: var(--main-font-color);
+    flex-basis: 1em;
+    margin: 5px;
+}
+
+.account-nav .flex {
+    align-items: center;
+}
+
+.account-nav .profile svg {
+    background-color: var(--main-font-color);
+    fill: white;
+    margin: 5px;
+    border-radius: 50%;
+    flex-basis: 1.5em;
+}
+
+.account-nav .profile a {
+    color: white;
+    font-weight: 700;
 }
 
 
@@ -242,6 +271,7 @@ main .main-content {
 
     .left-nav-top .logo{
         margin-left: 20%;
+        height: 50px;
     }
     
     .left-nav-top .logo .logo-small {
@@ -272,6 +302,25 @@ main .main-content {
     .playlist-nav {
         display: none;
     }
+
+    .account-nav a {
+        display: none;
+    }
+
+    .account-nav .line {
+        display: none;
+    }
+
+    .account-nav .install svg {
+        flex-basis: 1em;
+        margin: 5px auto;
+    }
+
+    .account-nav .profile svg {
+        flex-basis: 1.5em;
+        margin: 5px auto;
+    }
+    
 
 }
 
