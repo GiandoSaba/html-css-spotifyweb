@@ -221,7 +221,7 @@ main .main-content {
     justify-content: flex-end;
 }
 
-.account-nav .line {
+.account-nav .hr {
     width: 100%;
     height: 1px;
     margin: 5px 0;
@@ -308,7 +308,7 @@ main .main-content {
         display: none;
     }
 
-    .account-nav .line {
+    .account-nav .hr {
         display: none;
     }
 
@@ -341,8 +341,8 @@ main .main-content {
 
 .footer-nav .player {
     width: 60%;
+    margin: 0 2em;
     height: 100%;
-    background-color: yellow;
 }
 
 .footer-nav .album .song {
@@ -371,4 +371,66 @@ main .main-content {
 
 .footer-nav .album .song-ico i{
     margin: 0 0.5em;
+}
+
+.footer-nav .player .player-button,
+.footer-nav .player .player-line {
+    width: 100%;
+    height: 50%;
+}
+
+.footer-nav .player .player-button {
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-nav .player .player-button i {
+    margin: 0 15px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.footer-nav .player .player-button i.play {
+    font-size: 2em;
+}
+
+.footer-nav .player .player-line {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav .player .player-line .timer {
+    color: white;
+    font-size: 0.7em;
+    margin: 0 1em;
+}
+
+.footer-nav .player .player-line .line {
+    width: 80%;
+    height: 3px;
+    background-color: var(--main-font-color);
+    border-radius: 10px;
+    align-items: center;
+}
+
+.footer-nav .player .player-line .line .line-active {
+    width: 20%;
+    height: 100%;
+    background-color: lightgrey;
+}
+
+.footer-nav .player .player-line:hover .line .line-active {
+    background-color: var(--green-active-color); 
+}
+
+.footer-nav .player .player-line .line .line-indicator{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    display: none;
+}
+
+.footer-nav .player .player-line:hover .line .line-indicator {
+    display: block;
 }
