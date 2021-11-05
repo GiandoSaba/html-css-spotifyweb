@@ -125,6 +125,18 @@ main {
     background-color: transparent;
     margin: auto 1em;
     padding: 1em 2.5em;
+    transition: 5ms;
+}
+
+.main-content .call-to-action .cta-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media screen and (max-height: 280px) {
+    .main-content .call-to-action {
+        display: none;
+    }
 }
 
 /* LEFT NAV */
@@ -337,6 +349,12 @@ main .main-content {
     color: white;
 }
 
+.footer-nav .album .song .song-title .song-name:hover{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .footer-nav .album .song-ico {
     margin: 1em 0;
     align-items: center;
@@ -345,6 +363,10 @@ main .main-content {
 
 .footer-nav .album .song-ico i{
     margin: 0 0.5em;
+}
+
+.footer-nav .album .song-ico i:hover{
+    color: white;
 }
 
 .footer-nav .player .player-button,
@@ -367,6 +389,10 @@ main .main-content {
 
 .footer-nav .player .player-button i.play {
     font-size: 2em;
+}
+
+.footer-nav .player .player-button i.play:hover {
+    transform: scale(1.1);
 }
 
 .footer-nav .player .player-line {
@@ -462,12 +488,12 @@ main .main-content {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     font-size: 4em;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
 }
 
 .album-container .image-container .play-overlay i {
@@ -588,3 +614,5 @@ main .main-content {
     }
     
 }
+
+
