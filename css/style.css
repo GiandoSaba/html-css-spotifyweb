@@ -189,7 +189,7 @@ main .main-content {
     font-weight: 500;
 }
 
-.button-nav-list .button-nav-list-item:first-child {
+.button-nav-list .button-nav-list-item.active {
     border-left: 2px solid var(--green-active-color);
     padding: 0 18px;
 }
@@ -219,7 +219,8 @@ main .main-content {
     margin-bottom: 0.5em;
 }
 
-.playlist-nav .add-playlist .plus {
+.playlist-nav .add-playlist::before {
+    content: '+';
     color: var(--nav-bg-color);
     background-color: var(--main-font-color);
     font-weight: bold;
@@ -231,7 +232,7 @@ main .main-content {
     font-size: 2.5em;
 }
 
-.playlist-nav .add-playlist:hover .plus {
+.playlist-nav .add-playlist:hover:before {
     background-color: white;
 }
 
@@ -295,75 +296,6 @@ main .main-content {
 .account-nav .profile a {
     color: white;
     font-weight: 700;
-}
-
-
-@media screen and (max-width: 600px) {
-    main .left-nav {
-        width: var(--left-nav-xs-width);
-    }
-
-    main .main-content {
-        width: calc(100% - var(--left-nav-xs-width));
-    }
-    
-    .main-content .call-to-action {
-        width: calc(100% - var(--left-nav-xs-width));
-    }
-
-    .left-nav-top .logo{
-        margin-left: 20%;
-        height: 50px;
-    }
-    
-    .left-nav-top .logo .logo-small {
-        display: block;
-    }
-
-    .left-nav-top .logo .logo-big {
-        display: none;
-    }
-
-    .button-nav-list .button-nav-list-item {
-        padding: 0;
-    }
-
-    .button-nav-list .button-nav-list-item a{
-        display: none;
-    }
-
-    .button-nav-list .button-nav-list-item svg{
-        margin: auto;
-    }
-
-    .button-nav-list .button-nav-list-item:first-child {
-        border-left: 0;
-        padding: 0;
-    }
-
-    .playlist-nav {
-        display: none;
-    }
-
-    .account-nav a {
-        display: none;
-    }
-
-    .account-nav .hr {
-        display: none;
-    }
-
-    .account-nav .install svg {
-        flex-basis: 1em;
-        margin: 5px auto;
-    }
-
-    .account-nav .profile svg {
-        flex-basis: 1.5em;
-        margin: 5px auto;
-    }
-    
-
 }
 
 .footer-nav {
@@ -513,13 +445,12 @@ main .main-content {
 }
 
 .section-album {
-    justify-content: space-around;
     text-align: center;
 }
 
 .album-container{
     width: calc(100% / 6);
-    margin: 0 0.5em;
+    margin-right: 10px;
     line-height: 1.3em;
 }
 
@@ -535,6 +466,95 @@ main .main-content {
     font-size: 60%;
 }
 
-.popular .album-container img{
+.album-container.circle img{
     border-radius: 50%;
+}
+
+@media screen and (max-width: 1100px) {
+    .section-album {
+        flex-wrap: wrap;
+    }
+    
+    .album-container{
+        width: calc(100% / 4 - 10px);
+    }
+} 
+
+@media screen and (max-width: 700px) {
+    .section-album {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .album-container{
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    main .left-nav {
+        width: var(--left-nav-xs-width);
+    }
+
+    main .main-content {
+        width: calc(100% - var(--left-nav-xs-width));
+    }
+    
+    .main-content .call-to-action {
+        width: calc(100% - var(--left-nav-xs-width));
+    }
+
+    .left-nav-top .logo{
+        margin-left: 20%;
+        height: 50px;
+    }
+    
+    .left-nav-top .logo .logo-small {
+        display: block;
+    }
+
+    .left-nav-top .logo .logo-big {
+        display: none;
+    }
+
+    .button-nav-list .button-nav-list-item {
+        padding: 0;
+    }
+
+    .button-nav-list .button-nav-list-item a{
+        display: none;
+    }
+
+    .button-nav-list .button-nav-list-item svg{
+        margin: auto;
+    }
+
+    .button-nav-list .button-nav-list-item.active{
+        border-left: 0;
+        padding: 0;
+    }
+
+    .playlist-nav {
+        display: none;
+    }
+
+    .account-nav a {
+        display: none;
+    }
+
+    .account-nav .hr {
+        display: none;
+    }
+
+    .account-nav .install svg {
+        flex-basis: 1em;
+        margin: 5px auto;
+    }
+
+    .account-nav .profile svg {
+        flex-basis: 1.5em;
+        margin: 5px auto;
+    }
+    
 }
