@@ -64,6 +64,10 @@ ul {
     float: left;
 }
 
+.circle {
+    border-radius: 50%;
+}
+
 .line {
     height: 3px;
     background-color: var(--main-font-color);
@@ -85,7 +89,6 @@ ul {
 .line .line-indicator{
     width: 15px;
     height: 15px;
-    border-radius: 50%;
     background-color: white;
     display: none;
 }
@@ -123,8 +126,8 @@ main {
     border-radius: 100px;
     color: white;
     background-color: transparent;
-    margin: auto 1em;
-    padding: 1em 2.5em;
+    margin: auto 2em;
+    padding: 1em 2.8em;
     transition: 5ms;
 }
 
@@ -248,6 +251,10 @@ main .main-content {
     background-color: white;
 }
 
+.playlist-nav .add-playlist:hover a {
+    color: white;
+}
+
 .playlist-nav .add-playlist a {
     line-height: 30px;
     font-size: 1.3em;
@@ -276,7 +283,6 @@ main .main-content {
 }
 
 .account-nav .hr {
-    width: 100%;
     height: 1px;
     margin: 5px 0;
     background-color: var(--main-font-color);
@@ -301,7 +307,6 @@ main .main-content {
     background-color: var(--main-font-color);
     fill: white;
     margin: 5px;
-    border-radius: 50%;
     flex-basis: 1.5em;
 }
 
@@ -518,14 +523,6 @@ main .main-content {
     font-size: 60%;
 }
 
-.album-container.circle img{
-    border-radius: 50%;
-}
-
-.album-container.circle:hover .image-container .play-overlay{
-    border-radius: 50%;
-}
-
 @media screen and (max-width: 1100px) {
     .section-album {
         flex-wrap: wrap;
@@ -570,16 +567,16 @@ main .main-content {
         display: block;
     }
 
-    .left-nav-top .logo .logo-big {
+    .left-nav-top .logo .logo-big,
+    .playlist-nav,
+    .button-nav-list .button-nav-list-item a,
+    .account-nav a,
+    .account-nav .hr {
         display: none;
     }
 
     .button-nav-list .button-nav-list-item {
         padding: 0;
-    }
-
-    .button-nav-list .button-nav-list-item a{
-        display: none;
     }
 
     .button-nav-list .button-nav-list-item svg{
@@ -589,18 +586,6 @@ main .main-content {
     .button-nav-list .button-nav-list-item.active{
         border-left: 0;
         padding: 0;
-    }
-
-    .playlist-nav {
-        display: none;
-    }
-
-    .account-nav a {
-        display: none;
-    }
-
-    .account-nav .hr {
-        display: none;
     }
 
     .account-nav .install svg {
